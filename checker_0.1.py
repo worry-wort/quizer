@@ -28,7 +28,7 @@ def quiz(words_list):
     while answer != 'stop':
         w_num = randint(0, len(words_list) - 1)
         answer = input(f'{words_list[w_num][1]} \n')
-        if answer in words_list[w_num]:
+        if answer.lower() in [i.lower() for i in words_list[w_num]]:
             right += 1
         elif answer == 'stop':
             continue
